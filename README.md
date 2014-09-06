@@ -52,8 +52,8 @@ $(document).ready(function () {
 Available options:
 ------------------
 
-* **selectorClass** (string) Name of the class used to select the lazy elements. Note that the class will be remove after the callback execution. By default is *lazy*
-* **callback** (function) The callback to be executed for each lazy element. The first argument is the jquery object with the element.
+* **selectorClass** (string) Name of the class used to select the lazy elements. Note that the class is removed after the callback to avoid being executed twice. By default is *lazy*
+* **callback** (function) The callback executed for each lazy element. The argument provided is the jquery object with the element.
 * **threshold** (integer) By default is 0
-* **scrollInterval** (integer) Defines the duration of the timeout used to prevent the scroll execute the callback event too many times. By default is 500.
+* **scrollInterval** (integer) Defines the duration of the timeout used while scrolling to prevent trigger the scroll callback too many times and improve the performance. By default is 500.
 
