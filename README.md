@@ -1,7 +1,7 @@
-jquery.lazy
-===========
+jquery.lazyscript
+=================
 
-Simple jquery plugin to execute js code in lazy mode. You only have to provide a callback to execute for each element appearing in the viewport.
+Simple jquery plugin to execute any javascript code in lazy mode. You only have to provide a callback to execute for each element appearing in the viewport.
 
 Usage
 -----
@@ -21,7 +21,7 @@ Usage
 
 ```javascript
 $(document).ready(function () {
-	$(window).lazy({
+	$(window).lazyscript({
 		callback: function ($element) {
 			var src = $element.data('src');
 			$element.html('<img src="' + src + '">');
@@ -40,7 +40,7 @@ $(document).ready(function () {
 
 ```javascript
 $(document).ready(function () {
-	$(window).lazy({
+	$(window).lazyscript({
 		callback: function ($element) {
 			var url = $element.data('src');
 			$element.load(url);

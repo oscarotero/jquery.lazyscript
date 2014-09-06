@@ -5,7 +5,7 @@
 		factory(jQuery);
 	}
 }(function ($) {
-	var pluginName = "lazy", defaults = {
+	var pluginName = "lazyscript", defaults = {
 		selectorClass: 'lazy',
 		callback: jQuery.noop,
 		threshold: 0,
