@@ -52,8 +52,13 @@ $(document).ready(function () {
 Available options:
 ------------------
 
-* **selectorClass** (string) Name of the class used to select the lazy elements. Note that the class is removed after the callback to avoid being executed twice. By default is *lazy*
+* **selectorClass** (string) Name of the class used to select the lazy elements. Note that the class is removed after the callback to avoid being executed twice (unless your callback returns `false`). By default is *lazy*
 * **callback** (function) The callback executed for each lazy element. The argument provided is the jquery object with the element.
 * **threshold** (integer) By default is 0
 * **scrollInterval** (integer) Defines the duration of the timeout used while scrolling to prevent trigger the scroll callback too many times and improve the performance. By default is 500.
 
+Available methods:
+------------------
+
+* `$(window).lazyScript('pause')` Paused the plugins
+* `$(window).lazyScript('resume')` Resume the plugin if it's paused

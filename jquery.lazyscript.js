@@ -14,6 +14,7 @@
 
 	function Plugin (element, options) {
 		this.element = element;
+		this.paused = false;
 		this.$element = $(element);
 		this.settings = $.extend({}, defaults, options);
 
@@ -31,7 +32,10 @@
 				}
 
 				timeout = setTimeout(function() {
-					self.update();
+					if (!self.paused) {
+						self.update();
+					}
+
 					timeout = null;
 				}, self.settings.scrollInterval);
 			});
@@ -39,6 +43,14 @@
 			setTimeout(function () {
 				self.update();
 			}, 13);
+		},
+
+		pause: function () {
+			this.paused = true;
+		},
+
+		resume: function () {
+			this.paused = false;
 		},
 
 		destroy: function () {
@@ -52,8 +64,9 @@
 				var $this = $(this);
 
 				if (self.inViewport($this)) {
-					$this.removeClass(self.settings.selectorClass);
-					self.settings.callback.call(this, $this);
+					if (self.settings.callback.call(this, $this) !== false) {
+						$this.removeClass(self.settings.selectorClass);
+					}
 				}
 			});
 		},
