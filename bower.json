@@ -1,0 +1,7 @@
+{
+	"name": "jquery-lazyscript",
+	"version": "1.1.0",
+	"dependencies": {
+		"jquery": ">=1.7"
+	}
+}
