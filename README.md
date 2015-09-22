@@ -3,6 +3,11 @@ jquery.lazyScript
 
 Simple jquery plugin to execute any javascript code in lazy mode. You only have to provide a callback to execute for each element appearing in the viewport.
 
+Demos:
+------
+* Lazy loading images: http://oscarotero.github.io/jquery.lazyscript/demo/images.html
+* Lazy loading youtube videos: http://oscarotero.github.io/jquery.lazyscript/demo/youtube.html
+
 Usage
 -----
 
